@@ -19,8 +19,8 @@ All the essentials. None of the extras. Takes a lot of cues from the Angular [qu
 
 ## Installation
 
-- Clone the repo: `git clone git@github.com:scotch-io/angular2-starter-basic`
-- Choose the new directory: `cd angular2-starter-basic`
+- Clone the repo: `git clone git@github.com:shnmkhk/ng2-jit-aot-starter`
+- Choose the new directory: `cd ng2-jit-aot-starter`
 - Install dependencies: `npm install`
 - Build app in dev/jit mode: `npm build:jit`
 - Build app in prod/aot mode: `npm build:aot`
