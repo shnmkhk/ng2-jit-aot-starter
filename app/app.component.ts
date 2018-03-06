@@ -13,5 +13,5 @@ import { Component } from '@angular/core';
   `
 })
 export class AppComponent {
-  message = 'This is the sample message.';
+  message = 'Hello World';
 }

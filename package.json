@@ -6,10 +6,10 @@
   "scripts": {
     "clean": "rm -rf aot dist && rm -rf app/*.js",
     "lite": "lite-server",
-    "copy:jit":"cp support/main-jit.ts app/main.ts && cp support/index-jit.html index.html",
-    "copy:aot":"cp support/main-aot.ts app/main.ts && cp support/index-aot.html index.html",
-    "ngc":"ngc -p tsconfig-aot.json",
-    "rollup":"rollup -c rollup-config.js",
+    "copy:jit": "cp support/main-jit.ts app/main.ts && cp support/index-jit.html index.html",
+    "copy:aot": "cp support/main-aot.ts app/main.ts && cp support/index-aot.html index.html",
+    "ngc": "ngc -p tsconfig-aot.json",
+    "rollup": "rollup -c rollup-config.js",
     "build:jit": "npm run copy:jit && tsc",
     "build:aot": "npm run copy:jit && npm run ngc && npm run copy:aot && npm run ngc && npm run rollup",
     "dev": "npm run clean && npm run build:jit && npm run lite",
@@ -29,7 +29,7 @@
     "rollup-plugin-node-resolve": "2.0.0",
     "rollup-plugin-uglify": "1.0.1"
   },
-  "dependencies": {   
+  "dependencies": {
     "@angular/common": "~4.0.0",
     "@angular/compiler": "~4.0.0",
     "@angular/core": "~4.0.0",
@@ -40,8 +40,7 @@
     "@angular/router": "~4.0.0",
     "@angular/upgrade": "~4.0.0",
     "@angular/compiler-cli": "~4.0.0",
-    "@angular/platform-server": "~4.0.0",    
-    
+    "@angular/platform-server": "~4.0.0",
     "systemjs": "0.19.40",
     "core-js": "^2.4.1",
     "rxjs": "5.0.1",
