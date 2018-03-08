@@ -1,5 +1,5 @@
 import { Component, OnChanges, SimpleChanges } from '@angular/core';
-
+import { ArithmeticService } from './services/index';
 @Component({
     selector: 'login-app',
     styles: [`
@@ -26,6 +26,9 @@ export class LoginComponent {
     messageReady:boolean = false;
     uname: string;
     password: string;
+    constructor(private arthmeticService:ArithmeticService) {
+        console.log('[LoginComponent] ' + this.arthmeticService.rand);
+    }
     /*
     inputUser: String = 'DEFAULT';
     inputUser2: string = "DEFAULT_TEXT_TWO";
