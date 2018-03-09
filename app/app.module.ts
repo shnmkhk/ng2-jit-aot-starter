@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms'
-import { AppComponent, LoginComponent, CalculatorComponent } from './index';
-import { ArithmeticService } from './services/index';
+import { AppComponent, LoginComponent, CalculatorComponent, FirstComponent, SecondComponent, ThirdComponent } from './index';
+import { ArithmeticService, UserService } from './services/index';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, LoginComponent, CalculatorComponent],
-  providers: [ArithmeticService],
-  bootstrap: [LoginComponent, AppComponent, CalculatorComponent]
+  imports: [BrowserModule, CommonModule, FormsModule],
+  declarations: [AppComponent, LoginComponent, CalculatorComponent, FirstComponent, SecondComponent, ThirdComponent],
+  providers: [ArithmeticService, UserService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
