@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserService } from './services/User.service';
+import { UserService, SampleHttpService } from './services/index';
 
 @Component({
   selector: 'my-app',
@@ -12,17 +12,22 @@ import { UserService } from './services/User.service';
       <second-el></second-el>
       <third-el></third-el>
       <button *ngIf="showClickButton" (click)="clickHandle()">Sign-in</button>
+      <button (click)="makeCall()">Hit SampleHTTPAPI</button>
     </div>
   `
 })
 export class AppComponent {
   message = 'Hello World';
   showClickButton:boolean = true;
-  constructor(private userService:UserService) {
+  constructor(private userService:UserService, private sampleHttpService:SampleHttpService) {
 
   }
   clickHandle(){
     this.userService.handleSuccess();
     this.showClickButton = false;
+  }
+
+  makeCall() {
+    this.sampleHttpService.getConfig();
   }
 }
