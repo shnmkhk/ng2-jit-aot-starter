@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService, SampleHttpService } from './services/index';
-
+import { Observable } from 'rxjs/Rx'
 @Component({
   selector: 'my-app',
   styles: [`
@@ -28,6 +28,16 @@ export class AppComponent {
   }
 
   makeCall() {
-    this.sampleHttpService.getConfig();
+    this.sampleHttpService.getConfig().subscribe(
+      data => {
+        console.log(Object.keys(data));
+      },
+      error => {
+        console.error("[ERROR] " + error);
+      },
+      () => {
+        console.log("[INFO] Call is complete");
+      }
+    );
   }
 }

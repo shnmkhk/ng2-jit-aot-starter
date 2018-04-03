@@ -7,9 +7,6 @@ export class SampleHttpService {
     }
 
     getConfig() {
-        this.http.get('/config.json').subscribe(data => {
-            data = data.json();
-            console.log('[INFO] Response: ' + data['background-color']);
-        });
+        this.http.get('/config.json')
     }
 }
